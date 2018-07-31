@@ -33,6 +33,45 @@
 
 ![演示gif](https://github.com/niezhiliang/jenkins-docker-maven-git/blob/master/env-build/imgs/welcome.jpg)
 
+####   配置Jenkins   Publish Over SSH  配置SSH登陆centos
+
+- 在Jenkins所在的服务器  使用下面命令 生成一个秘钥对
+
+    ssh-keygen -t rsa 
+    
+    这里输入命令后一直回车就好，生成了就会出现下面这个界面  会有两个文件生成在 /root/.ssh文件夹下面 
+    id_rsa(私钥) 和 id_rsa.pub（公钥）
+    
+
+![演示gif](https://github.com/niezhiliang/jenkins-docker-maven-git/blob/master/env-build/imgs/ssh.jpg)
+
+
+- 此时登录到项目要发布的服务器上执行如下指令
+    
+    cd ~
+
+    mkdir .ssh
+    
+    cd .ssh
+    
+    touch authorized_keys
+    
+    将Jenkins生成的公钥内容复制到这个文件里面
+    
+    然后重新启动项目服务器的ssh连接
+    
+    service sshd restart
+    
+- 回到Jenkins登录的页面 
+    
+    系统管理 =>   管理插件 => 可选插件 =>右上角搜索框输入 Publish => 找到Publish Over SSH 并安装 => 系统管理 =>
+     系统设置 => 移到页面底部 => Publish over SSH 配置一下
+     
+     
+![演示gif](https://github.com/niezhiliang/jenkins-docker-maven-git/blob/master/env-build/imgs/config.jpg)    
+
+
+
 
 
 
