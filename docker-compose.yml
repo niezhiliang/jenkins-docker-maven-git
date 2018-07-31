@@ -13,3 +13,4 @@ services:
      volumes:
        - /home/hzq/jenkins:/var/jenkins_home jenkins
        - /home/hzq/jenkins/adminpwd:/var/jenkins_home/secrets/
+       - /root/.ssh:/root/.ssh
