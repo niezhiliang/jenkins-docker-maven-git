@@ -9,12 +9,12 @@ jenkins-docker-maven-git 自动化部署
 
 - 然后后台运行jenkins
   
-    docker-compose up -d
-    
-    运行完成后打开浏览器访问：`${ip}:${port}` 端口默认8080 我改成了 8888 因为我的8080被占用了
-    
-    访问成功后，会让输入 Administrator password 
-    
+      docker-compose up -d
+
+      运行完成后打开浏览器访问：`${ip}:${port}` 端口默认8080 我改成了 8888 因为我的8080被占用了
+
+      访问成功后，会让输入 Administrator password 
+
     
     
     
