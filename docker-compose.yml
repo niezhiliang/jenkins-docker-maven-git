@@ -12,5 +12,5 @@ services:
        - "50000:50000"
      volumes:
        - /home/docker/jenkins:/var/jenkins_home
-       - /root/.ssh:/root/.ssh
+       - /java:/java
        - /usr/local/jenkins:/usr/local/jenkins
