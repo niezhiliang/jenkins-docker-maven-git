@@ -5,16 +5,20 @@
 - 环境装好以后 进入 项目文件夹`env-build`下，有个脚本 运行安装
 
 - 然后后台运行jenkins
+    
+     启动之前先执行下面的命令
+     
+     mkdir /home/docker
+     
+     chmod 777 /home/docker(这里主要是为了防止docker和宿主机权限不足，因为容器的用户为1000 而宿主机是 root)
   
       docker-compose up -d
 
       运行完成后打开浏览器访问：`${ip}:${port}` 端口默认8080 我改成了 8888 因为我的8080被占用了
 
-      访问成功后，会让输入 Administrator password  我们进入docker 容器内部查看一下
+      访问成功后，会让输入 Administrator password  
       
-      docker exec -it jenkins /bin/bash
-      
-      cd /var/jenkins_home/secrets/
+      cd /home/docker/jenkins/secrets
       
       cat cat initialAdminPassword
       
