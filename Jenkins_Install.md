@@ -48,19 +48,19 @@
 
 - 此时登录到项目要发布的服务器上执行如下指令
     
-    cd ~
+        cd ~
 
-    mkdir .ssh
-    
-    cd .ssh
-    
-    touch authorized_keys
-    
-    将Jenkins生成的公钥内容复制到这个文件里面
-    
-    然后重新启动项目服务器的ssh连接
-    
-    service sshd restart
+        mkdir .ssh
+
+        cd .ssh
+
+        touch authorized_keys
+
+        将Jenkins生成的公钥内容复制到这个文件里面
+
+        然后重新启动项目服务器的ssh连接
+
+        service sshd restart
     
 - 回到Jenkins登录的页面 
     
