@@ -13,3 +13,4 @@ services:
      volumes:
        - /home/docker/jenkins:/var/jenkins_home
        - /root/.ssh:/root/.ssh
+       - /usr/local/jenkins:/usr/local/jenkins
